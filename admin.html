@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Novaë</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+    <button onclick="logout()" class="btn-secondary">
+      Déconnexion
+    </button>
+
+    <div class="filter-container">
+
+  <input type="date" id="start-date">
+  <input type="date" id="end-date">
+
+  <button onclick="filterByDate()" class="btn-primary">
+    Filtrer
+  </button>
+
+  <button onclick="resetFilter()" class="btn-secondary">
+    Réinitialiser
+  </button>
+
+</div>
+
+    <canvas id="salesChart" height="100"></canvas>
+
+  <h2 style="margin:20px;"> Top produits vendus</h2>
+  <div id="top-products" class="top-products"></div>
+
+  <h1 class="admin-title">📦 Dashboard Commandes</h1>
+
+  <div class="stats-container">
+
+  <div class="stat-card">
+    <h3>Total ventes</h3>
+    <p id="total-sales">0 FCFA</p>
+  </div>
+
+  <div class="stat-card">
+    <h3>Commandes</h3>
+    <p id="total-orders">0</p>
+  </div>
+
+  <div class="stat-card">
+    <h3>Produits vendus</h3>
+    <p id="total-products">0</p>
+  </div>
+
+</div>
+
+  <div id="orders" class="orders-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="admin.js"></script>
+
+</body>
+</html>

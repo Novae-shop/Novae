@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Novaë</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h2>Novaë</h2>
+  <nav>
+      <a href="Acceuil.html">Accueil</a>
+      <a href="boutique.html">Boutique</a>
+      <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="contact-page">
+
+  <h1>📩 Contactez-nous</h1>
+
+  <div class="contact-container">
+
+    <!-- FORMULAIRE -->
+    <form id="contact-form" class="contact-form">
+      <input type="text" placeholder="Nom" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Votre message..." required></textarea>
+
+      <button type="submit" class="btn-primary">
+        Envoyer
+      </button>
+
+      <div id="contact-success" class="success-msg"></div>
+    </form>
+
+    <!-- INFOS -->
+    <div class="contact-info">
+      <h3>📍 Informations</h3>
+      <p>📍 Lomé, Togo</p>
+      <p>📞 +228 71 46 04 29</p>
+      <p>📧 bricemedannou55@gmail.com</p>
+
+      <button id="whatsapp-btn" class="btn-secondary">
+        💬 WhatsApp
+      </button>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="contact.js"></script>
+</body>
+</html>

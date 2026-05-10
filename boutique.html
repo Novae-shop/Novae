@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Boutique - Novaë</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <h2>Novaë</h2>
+  </div>
+
+  <nav>
+    <a href="Acceuil.html">Accueil</a>
+    <a href="boutique.html">Boutique</a>
+          <a href="about.html">À propos</a>
+      <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="actions">
+    <div class="cart" id="cart-btn">
+      🛒 <span id="cart-count">0</span>
+    </div>
+  </div>
+</header>
+
+<section class="shop-page">
+
+  <h1>🛍️ Tous nos produits</h1>
+
+  <div class="shop-controls">
+    <input type="text" id="searchInput" placeholder="Rechercher...">
+
+    <select id="categoryFilter">
+      <option value="all">Toutes</option>
+      <option value="clothes">Vêtements</option>
+      <option value="phones">Portables</option>
+    </select>
+
+    <select id="sortFilter">
+      <option value="default">Trier</option>
+      <option value="price-asc">Prix ↑</option>
+      <option value="price-desc">Prix ↓</option>
+    </select>
+  </div>
+
+  <div id="product-list" class="product-grid"></div>
+
+</section>
+
+<!-- 🛒 OVERLAY -->
+<div id="overlay" class="overlay"></div>
+
+<!-- 🛒 PANIER -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h2>Mon Panier</h2>
+    <span id="close-cart">✖</span>
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+<div class="cart-footer">
+  <strong id="cart-total">Total: 0 FCFA</strong>
+
+  <button id="checkout-btn" class="btn-primary">
+    Commander 🧾
+  </button>
+</div>
+
+<script src="boutique.js"></script>
+
+</body>
+</html>

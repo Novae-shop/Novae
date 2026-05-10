@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Novaë - Luxury Store</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+</head>
+
+<body>
+
+<!-- ======================================== -->
+<!-- 🔥 NAVBAR PREMIUM -->
+<!-- ======================================== -->
+
+<header class="navbar">
+
+  <div class="logo">
+    <h2>Novaë</h2>
+  </div>
+
+  <nav class="nav-links">
+
+    <a href="Accueil.html">Accueil</a>
+
+    <a href="boutique.html">Boutique</a>
+
+    <a href="about.html">À propos</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+  <div class="nav-actions">
+
+    <a href="login.html" class="login-btn">
+      Connexion
+    </a>
+
+    <div class="cart" id="cart-btn">
+
+      <i class="fa-solid fa-bag-shopping"></i>
+
+      <span id="cart-count">0</span>
+
+    </div>
+
+    <!-- 📱 MENU MOBILE -->
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+  </div>
+
+</header>
+
+<!-- ======================================== -->
+<!-- 🎥 HERO CINÉMATIQUE -->
+<!-- ======================================== -->
+
+<section class="hero">
+
+  <video autoplay muted loop playsinline class="hero-video">
+
+    <source
+      src="video.mp4"
+      type="video/mp4"
+    >
+
+  </video>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content fade-up">
+
+    <p class="hero-subtitle">
+      Nouvelle Collection 2026
+    </p>
+
+    <h1>
+      Le Luxe Moderne
+      Réinventé
+    </h1>
+
+    <p class="hero-text">
+
+      Sneakers premium,
+      vêtements tendance,
+      accessoires de luxe.
+
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="boutique.html" class="btn-primary">
+
+        Découvrir
+
+      </a>
+
+      <a href="about.html" class="btn-secondary">
+
+        Notre histoire
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ======================================== -->
+<!-- 🔥 TENDANCES -->
+<!-- ======================================== -->
+
+<section class="trending">
+
+  <div class="section-header">
+
+    <h2>Tendances du moment</h2>
+
+    <a href="boutique.html">
+      Voir tout →
+    </a>
+
+  </div>
+
+  <div class="product-grid">
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img
+        src="images/phones/iphone3.jpg"
+      >
+
+      <div class="product-info">
+
+        <h3>Iphone 14 Pro Max</h3>
+
+        <p>Smartphones</p>
+
+        <strong>300 000 FCFA</strong>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img
+        src="images/Sacs/sac1.jpeg"
+      >
+
+      <div class="product-info">
+
+        <h3>Sac Premium</h3>
+
+        <p>Accessoires</p>
+
+        <strong>35 000 FCFA</strong>
+
+      </div>
+
+    </div>
+
+    <!-- CARD -->
+
+    <div class="product-card">
+
+      <img
+        src="images/Habits/habit1.jpeg"
+      >
+
+      <div class="product-info">
+
+        <h3>Veste Novaë</h3>
+
+        <p>Mode</p>
+
+        <strong>45 000 FCFA</strong>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- 🎥 BANNER PUB -->
+<!-- ======================================== -->
+
+<section class="promo-banner">
+
+  <div class="promo-overlay"></div>
+
+  <div class="promo-content">
+
+    <h1>
+
+      Plus qu’un style.
+      Une identité.
+
+    </h1>
+
+    <p>
+
+      Découvrez la nouvelle génération
+      du streetwear premium.
+
+    </p>
+
+    <a href="boutique.html" class="btn-primary">
+
+      Explorer
+
+    </a>
+
+  </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- ⭐ AVIS -->
+<!-- ======================================== -->
+
+<section class="reviews">
+
+  <h2>Ce que disent nos clients</h2>
+
+  <div class="review-grid">
+
+    <div class="review-card">
+
+      <p>
+
+        “Qualité incroyable,
+        livraison rapide.”
+
+      </p>
+
+      <strong>— Kevin</strong>
+
+    </div>
+
+    <div class="review-card">
+
+      <p>
+
+        “Le design du site est incroyable.”
+
+      </p>
+
+      <strong>— Sarah</strong>
+
+    </div>
+
+    <div class="review-card">
+
+      <p>
+
+        “Meilleur shop mode du moment.”
+
+      </p>
+
+      <strong>— David</strong>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- 📩 NEWSLETTER -->
+<!-- ======================================== -->
+
+<section class="newsletter">
+
+  <h2>
+
+    Reçois les nouveautés
+    avant tout le monde
+
+  </h2>
+
+  <div class="newsletter-form">
+
+    <input
+      type="email"
+      placeholder="Votre email"
+    >
+
+    <button class="btn-primary">
+
+      S'abonner
+
+    </button>
+
+  </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- 🛒 PANIER -->
+<!-- ======================================== -->
+
+<div id="overlay" class="overlay"></div>
+
+<div id="cart-sidebar" class="cart-sidebar">
+
+  <div class="cart-header">
+
+    <h2>Mon Panier</h2>
+
+    <span id="close-cart">✖</span>
+
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+  <div class="cart-footer">
+
+    <strong id="cart-total">
+
+      Total: 0 FCFA
+
+    </strong>
+
+    <button
+      id="checkout-btn"
+      class="btn-primary"
+    >
+
+      Commander
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ======================================== -->
+<!-- 🚀 SCRIPTS -->
+<!-- ======================================== -->
+
+<script src="app.js"></script>
+
+<script>
+
+  // 📱 MENU MOBILE
+
+  const toggle =
+    document.getElementById("menu-toggle");
+
+  const nav =
+    document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+
+  });
+
+</script>
+
+</body>
+</html>

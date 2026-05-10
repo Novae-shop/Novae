@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Checkout - Novaë</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header class="navbar">
+
+    <h2 class="logo">Novaë</h2>
+
+    <a href="boutique.html">
+      ← Retour boutique
+    </a>
+
+  </header>
+
+  <!-- CHECKOUT -->
+
+  <section class="checkout-page">
+
+    <div class="checkout-container">
+
+      <!-- PRODUITS -->
+
+      <div class="checkout-left">
+
+        <h1>Votre commande</h1>
+
+        <div id="checkout-items"></div>
+
+        <h2 id="checkout-total">
+          Total : 0 FCFA
+        </h2>
+
+      </div>
+
+      <!-- FORMULAIRE -->
+
+      <div class="checkout-right">
+
+        <h1>Informations client</h1>
+
+        <div id="error-box"></div>
+
+        <form id="order-form">
+
+          <input
+            type="text"
+            placeholder="Nom complet"
+            required
+          >
+
+          <input
+            type="text"
+            placeholder="Ville"
+            required
+          >
+
+          <input
+            type="text"
+            placeholder="Adresse"
+            required
+          >
+
+          <input
+            type="tel"
+            placeholder="Téléphone"
+            required
+          >
+
+        </form>
+
+        <div class="checkout-buttons">
+
+          <button onclick="sendWhatsApp()">
+            Commander Par WhatsApp
+          </button>
+
+          <button onclick="sendEmail()">
+            Commander Par Email
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="checkout.js"></script>
+
+</body>
+</html>
