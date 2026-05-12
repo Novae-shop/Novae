@@ -506,7 +506,7 @@ document.addEventListener("DOMContentLoaded", () => {
   name: "IPhone 11 64Gb",
   price: 130000,
   category: "phones",
-  image: "images/phones/iphone11.jpg"
+  image: "images/phones/iphone10.png"
 },
 {
   id: 58,

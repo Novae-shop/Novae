@@ -1,88 +1,285 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
   <meta charset="UTF-8">
+
+  <meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
   <title>Boutique - Novaë</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- ICONS -->
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
+
 <body>
 
+<!-- ======================================== -->
+<!-- 🔥 NAVBAR -->
+<!-- ======================================== -->
+
 <header class="navbar">
+
   <div class="logo">
     <h2>Novaë</h2>
   </div>
 
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="boutique.html">Boutique</a>
-          <a href="about.html">À propos</a>
-      <a href="contact.html">Contact</a>
+  <nav class="nav-links" id="nav-links">
+
+    <a href="index.html">
+      Accueil
+    </a>
+
+    <a href="boutique.html" class="active">
+      Boutique
+    </a>
+
+    <a href="about.html">
+      À propos
+    </a>
+
+    <a href="contact.html">
+      Contact
+    </a>
+
   </nav>
 
-  <div class="actions">
+  <div class="nav-actions">
+
+    <!-- <a href="auth.html" class="login-btn">
+      Connexion
+    </a> -->
+
     <div class="cart" id="cart-btn">
-      🛒 <span id="cart-count">0</span>
+
+      <i class="fa-solid fa-bag-shopping"></i>
+
+      <span id="cart-count">0</span>
+
     </div>
+
+    <!-- 📱 MENU MOBILE -->
+    <div class="menu-toggle" id="menu-toggle">
+
+      <i class="fa-solid fa-bars"></i>
+
+    </div>
+
   </div>
+
 </header>
+
+<!-- ======================================== -->
+<!-- 🛍️ SHOP -->
+<!-- ======================================== -->
 
 <section class="shop-page">
 
-  <h1>🛍️ Tous nos produits</h1>
+  <div class="shop-header">
 
+    <h1>
+      🛍️ Tous nos produits
+    </h1>
+
+    <p>
+      Découvrez notre collection premium
+    </p>
+
+  </div>
+
+  <!-- 🔍 CONTROLS -->
   <div class="shop-controls">
-    <input type="text" id="searchInput" placeholder="Rechercher...">
+
+    <input
+    type="text"
+    id="searchInput"
+    placeholder="Rechercher un produit...">
 
     <select id="categoryFilter">
-      <option value="all">Toutes</option>
-      <option value="clothes">Vêtements</option>
-      <option value="phones">Portables</option>
+
+      <option value="all">
+        Toutes catégories
+      </option>
+
+      <option value="clothes">
+        Vêtements
+      </option>
+
+      <option value="phones">
+        Portables
+      </option>
+
+      <!-- <option value="shoes">
+        Sneakers
+      </option> -->
+
     </select>
 
     <select id="sortFilter">
-      <option value="default">Trier</option>
-      <option value="price-asc">Prix ↑</option>
-      <option value="price-desc">Prix ↓</option>
+
+      <option value="default">
+        Trier
+      </option>
+
+      <option value="price-asc">
+        Prix croissant
+      </option>
+
+      <option value="price-desc">
+        Prix décroissant
+      </option>
+
     </select>
+
   </div>
 
-  <div id="product-list" class="product-grid"></div>
+  <!-- 📦 PRODUCTS -->
+  <div
+  id="product-list"
+  class="product-grid">
+
+  </div>
 
 </section>
 
+<!-- ======================================== -->
 <!-- 🛒 OVERLAY -->
-<div id="overlay" class="overlay"></div>
+<!-- ======================================== -->
 
+<div
+id="overlay"
+class="overlay">
+
+</div>
+
+<!-- ======================================== -->
 <!-- 🛒 PANIER -->
-<div id="cart-sidebar" class="cart-sidebar">
+<!-- ======================================== -->
+
+<div
+id="cart-sidebar"
+class="cart-sidebar">
+
+  <!-- HEADER -->
   <div class="cart-header">
-    <h2>Mon Panier</h2>
-    <span id="close-cart">✖</span>
+
+    <h2>
+      Mon Panier
+    </h2>
+
+    <span id="close-cart">
+      ✖
+    </span>
+
   </div>
 
-  <div id="cart-items" class="cart-items"></div>
+  <!-- ITEMS -->
+  <div
+  id="cart-items"
+  class="cart-items">
 
-<div class="cart-footer">
-  <strong id="cart-total">Total: 0 FCFA</strong>
+  </div>
 
-  <button id="checkout-btn" class="btn-primary">
-    Commander 🧾
-  </button>
+  <!-- FOOTER -->
+  <div class="cart-footer">
+
+    <strong id="cart-total">
+
+      Total: 0 FCFA
+
+    </strong>
+
+    <button
+    id="checkout-btn"
+    class="btn-primary">
+
+      Commander 🧾
+
+    </button>
+
+  </div>
+
 </div>
+
+<!-- ======================================== -->
+<!-- 📱 MOBILE NAV -->
+<!-- ======================================== -->
 
 <div class="bottom-nav">
 
-  <a href="index.html">🏠</a>
+  <a href="index.html">
 
-  <a href="boutique.html">🛍️</a>
+    <i class="fa-solid fa-house"></i>
 
-  <a href="contact.html">📞</a>
+  </a>
 
-  <a href="auth.html">👤</a>
+  <a href="boutique.html" class="active">
+
+    <i class="fa-solid fa-store"></i>
+
+  </a>
+
+  <a href="contact.html">
+
+    <i class="fa-solid fa-phone"></i>
+
+  </a>
+
+  <!-- <a href="auth.html">
+
+    <i class="fa-solid fa-user"></i>
+
+  </a> -->
 
 </div>
 
+<!-- ======================================== -->
+<!-- 🚀 SCRIPT -->
+<!-- ======================================== -->
+
 <script src="boutique.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  // 📱 MENU MOBILE
+  const toggle =
+  document.getElementById("menu-toggle");
+
+  const nav =
+  document.getElementById("nav-links");
+
+  toggle.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+
+  });
+
+  // FERMER MENU
+  document.querySelectorAll(".nav-links a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      nav.classList.remove("active");
+
+    });
+
+  });
+
+});
+
+</script>
 
 </body>
 </html>

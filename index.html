@@ -23,28 +23,41 @@
 
 <header class="navbar">
 
+  <!-- LOGO -->
   <div class="logo">
     <h2>Novaë</h2>
   </div>
 
-  <nav class="nav-links">
+  <!-- NAVIGATION -->
+  <nav class="nav-links" id="nav-links">
 
-    <a href="index.html">Accueil</a>
+    <a href="index.html" class="active">
+      Accueil
+    </a>
 
-    <a href="boutique.html">Boutique</a>
+    <a href="boutique.html">
+      Boutique
+    </a>
 
-    <a href="about.html">À propos</a>
+    <a href="about.html">
+      À propos
+    </a>
 
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">
+      Contact
+    </a>
 
   </nav>
 
+  <!-- ACTIONS -->
   <div class="nav-actions">
 
+    <!-- LOGIN -->
     <!-- <a href="auth.html" class="login-btn">
       Connexion
     </a> -->
 
+    <!-- CART -->
     <div class="cart" id="cart-btn">
 
       <i class="fa-solid fa-bag-shopping"></i>
@@ -53,9 +66,11 @@
 
     </div>
 
-    <!-- 📱 MENU MOBILE -->
+    <!-- MOBILE -->
     <div class="menu-toggle" id="menu-toggle">
-      ☰
+
+      <i class="fa-solid fa-bars"></i>
+
     </div>
 
   </div>
@@ -66,7 +81,7 @@
 <!-- 🎥 HERO CINÉMATIQUE -->
 <!-- ======================================== -->
 
-<section class="hero">
+<section class="hero" id="hero">
 
   <video autoplay muted loop playsinline class="hero-video">
 
@@ -94,6 +109,7 @@
 
       Sneakers premium,
       vêtements tendance,
+      smartphones haut de gamme,
       accessoires de luxe.
 
     </p>
@@ -375,13 +391,29 @@
 
 <div class="bottom-nav">
 
-  <a href="index.html">🏠</a>
+  <a href="index.html" class="active">
 
-  <a href="boutique.html">🛍️</a>
+    <i class="fa-solid fa-house"></i>
 
-  <a href="contact.html">📞</a>
+  </a>
 
-  <a href="auth.html">👤</a>
+  <a href="boutique.html">
+
+    <i class="fa-solid fa-store"></i>
+
+  </a>
+
+  <a href="contact.html">
+
+    <i class="fa-solid fa-phone"></i>
+
+  </a>
+
+  <!-- <a href="auth.html">
+
+    <i class="fa-solid fa-user"></i>
+
+  </a> -->
 
 </div>
 
@@ -393,19 +425,34 @@
 
 <script>
 
-  // 📱 MENU MOBILE
+document.addEventListener("DOMContentLoaded", () => {
 
+  // MENU MOBILE
   const toggle =
-    document.getElementById("menu-toggle");
+  document.getElementById("menu-toggle");
 
   const nav =
-    document.querySelector(".nav-links");
+  document.getElementById("nav-links");
 
   toggle.addEventListener("click", () => {
 
     nav.classList.toggle("active");
 
   });
+
+  // FERMER MENU SI CLICK LINK
+  document.querySelectorAll(".nav-links a")
+  .forEach(link => {
+
+    link.addEventListener("click", () => {
+
+      nav.classList.remove("active");
+
+    });
+
+  });
+
+});
 
 </script>
 
