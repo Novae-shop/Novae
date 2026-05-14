@@ -1,21 +1,94 @@
-// 📩 FORMULAIRE
-const form = document.getElementById("contact-form");
-const successMsg = document.getElementById("contact-success");
+// =====================================================
+// 📧 INITIALISATION EMAILJS
+// =====================================================
 
-form.addEventListener("submit", function(e) {
+emailjs.init("2Bfzz4IESOhUclN42");
+
+
+// =====================================================
+// 📩 FORMULAIRE CONTACT
+// =====================================================
+
+const form =
+document.getElementById("contact-form");
+
+const successBox =
+document.getElementById("contact-success");
+
+form.addEventListener("submit", function(e){
+
   e.preventDefault();
 
-  successMsg.textContent = "✅ Message envoyé avec succès !";
+  // DONNÉES
 
-  form.reset();
+  const params = {
+
+    name:
+    document.getElementById("name").value,
+
+    email:
+    document.getElementById("email").value,
+
+    message:
+    document.getElementById("message").value
+  };
+
+  // ENVOI
+
+  emailjs.send(
+    "service_7eh8c5o",
+    "template_f1vx8t9",
+    params
+  )
+
+  .then(() => {
+
+    successBox.style.display =
+    "block";
+
+    successBox.innerHTML =
+    "✅ Message envoyé avec succès";
+
+    successBox.style.color =
+    "limegreen";
+
+    form.reset();
+
+  })
+
+  .catch((error) => {
+
+    console.log(error);
+
+    successBox.style.display =
+    "block";
+
+    successBox.innerHTML =
+    "❌ Erreur lors de l'envoi";
+
+    successBox.style.color =
+    "red";
+  });
+
 });
 
+
+// =====================================================
 // 💬 WHATSAPP
-document.getElementById("whatsapp-btn").addEventListener("click", () => {
+// =====================================================
 
-  const message = "Bonjour Novaë, j'ai une question concernant vos produits.";
+const whatsappBtn =
+document.getElementById("whatsapp-btn");
 
-  const url = `https://wa.me/22871460429?text=${encodeURIComponent(message)}`;
+if(whatsappBtn){
 
-  window.open(url, "_blank");
-});
+  whatsappBtn.addEventListener("click", () => {
+
+    window.open(
+      "https://wa.me/22871460429",
+      "_blank"
+    );
+
+  });
+
+}

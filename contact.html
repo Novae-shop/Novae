@@ -1,56 +1,249 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
+
   <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
   <title>Contact - Novaë</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
 </head>
+
 <body>
 
+<!-- ======================================== -->
+<!-- 🔥 NAVBAR -->
+<!-- ======================================== -->
+
 <header class="navbar">
-  <h2>Novaë</h2>
-  <nav>
-      <a href="index.html">Accueil</a>
-      <a href="boutique.html">Boutique</a>
-      <a href="about.html">À propos</a>
-      <a href="contact.html">Contact</a>
+
+  <div class="logo">
+    <h2>Novaë</h2>
+  </div>
+
+  <nav class="nav-links">
+
+    <a href="index.html">Accueil</a>
+
+    <a href="boutique.html">Boutique</a>
+
+    <a href="about.html">À propos</a>
+
+    <a href="contact.html">Contact</a>
+
   </nav>
+
+  <div class="nav-actions">
+
+    <div class="cart" id="cart-btn">
+
+      <i class="fa-solid fa-bag-shopping"></i>
+
+      <span id="cart-count">0</span>
+
+    </div>
+
+    <!-- 📱 MENU MOBILE -->
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+  </div>
+
 </header>
+
+<!-- ======================================== -->
+<!-- 📞 CONTACT PAGE -->
+<!-- ======================================== -->
 
 <section class="contact-page">
 
-  <h1>📩 Contactez-nous</h1>
+  <!-- TITLE -->
+
+  <div class="contact-title">
+
+    <h1>Contactez Novaë</h1>
+
+    <p>
+
+      Une question ?
+      Un partenariat ?
+      Notre équipe vous répond rapidement.
+
+    </p>
+
+  </div>
+
+  <!-- CONTENT -->
 
   <div class="contact-container">
 
-    <!-- FORMULAIRE -->
-    <form id="contact-form" class="contact-form">
-      <input type="text" placeholder="Nom" required>
-      <input type="email" placeholder="Email" required>
-      <textarea placeholder="Votre message..." required></textarea>
+    <!-- LEFT -->
 
-      <button type="submit" class="btn-primary">
-        Envoyer
-      </button>
-
-      <div id="contact-success" class="success-msg"></div>
-    </form>
-
-    <!-- INFOS -->
     <div class="contact-info">
-      <h3>📍 Informations</h3>
-      <p>📍 Lomé, Togo</p>
-      <p>📞 +228 71 46 04 29</p>
-      <p>📧 bricemedannou55@gmail.com</p>
 
-      <button id="whatsapp-btn" class="btn-secondary">
-        💬 WhatsApp
-      </button>
+      <div class="contact-card">
+
+        <h3>📍 Adresse</h3>
+
+        <p>
+          Lomé, Togo
+        </p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>📞 Téléphone</h3>
+
+        <p>
+          +228 71 46 04 29
+        </p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>📧 Email</h3>
+
+        <p>makpalibealyre08@gmail.com</p>
+
+        <p>
+          bricemedannou55@gmail.com
+        </p>
+
+      </div>
+
+      <div class="contact-card">
+
+        <h3>💬 WhatsApp</h3>
+
+        <p>
+          Disponible 24h/24 pour vos commandes.
+        </p>
+
+        <br>
+
+        <button
+          id="whatsapp-btn"
+          class="btn-primary"
+        >
+
+          Discuter maintenant
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- RIGHT -->
+
+    <div class="contact-form">
+
+      <h2>Envoyer un message</h2>
+
+<form id="contact-form" class="contact-form">
+
+  <input
+    type="text"
+    id="name"
+    placeholder="Nom"
+    required
+  >
+
+  <input
+    type="email"
+    id="email"
+    placeholder="Email"
+    required
+  >
+
+  <textarea
+    id="message"
+    placeholder="Votre message..."
+    required
+  ></textarea>
+
+  <button
+    type="submit"
+    class="btn-primary"
+  >
+    Envoyer
+  </button>
+
+  <div
+    id="contact-success"
+    class="success-msg"
+  ></div>
+
+</form>
+
     </div>
 
   </div>
 
 </section>
+
+<!-- ======================================== -->
+<!-- 🛒 OVERLAY -->
+<!-- ======================================== -->
+
+<div id="overlay" class="overlay"></div>
+
+<!-- ======================================== -->
+<!-- 🛒 PANIER -->
+<!-- ======================================== -->
+
+<div id="cart-sidebar" class="cart-sidebar">
+
+  <div class="cart-header">
+
+    <h2>Mon Panier</h2>
+
+    <span id="close-cart">✖</span>
+
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+  <div class="cart-footer">
+
+    <strong id="cart-total">
+
+      Total: 0 FCFA
+
+    </strong>
+
+    <button
+      id="checkout-btn"
+      class="btn-primary"
+    >
+
+      Commander
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ======================================== -->
+<!-- 📱 BOTTOM NAV -->
+<!-- ======================================== -->
 
 <div class="bottom-nav">
 
@@ -60,26 +253,43 @@
 
   </a>
 
-  <a href="boutique.html" class="active">
+  <a href="boutique.html">
 
     <i class="fa-solid fa-store"></i>
 
   </a>
 
-  <a href="contact.html">
+  <a href="contact.html" class="active">
 
     <i class="fa-solid fa-phone"></i>
 
   </a>
 
-  <!-- <a href="auth.html">
-
-    <i class="fa-solid fa-user"></i>
-
-  </a> -->
-
 </div>
 
+<!-- ======================================== -->
+<!-- 🚀 SCRIPTS -->
+<!-- ======================================== -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="contact.js"></script>
+
+<script>
+
+  // 📱 MENU MOBILE
+
+  const toggle =
+    document.getElementById("menu-toggle");
+
+  const nav =
+    document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+
+  });
+
+</script>
+
 </body>
 </html>

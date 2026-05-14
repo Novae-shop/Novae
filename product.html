@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
 
   <meta charset="UTF-8">
@@ -13,63 +14,185 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  >
+
 </head>
 
 <body>
 
-  <!-- HEADER -->
+<!-- ======================================== -->
+<!-- 🔥 NAVBAR -->
+<!-- ======================================== -->
 
-  <header class="navbar">
+<header class="navbar">
 
-    <h2 class="logo">Novaë</h2>
+  <div class="logo">
+    <h2>Novaë</h2>
+  </div>
 
-    <a href="boutique.html">
-      ← Retour boutique
+  <nav class="nav-links">
+
+    <a href="index.html">Accueil</a>
+
+    <a href="boutique.html">Boutique</a>
+
+    <a href="about.html">À propos</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+  <div class="nav-actions">
+
+    <a href="boutique.html" class="login-btn">
+
+      ← Retour
+
     </a>
 
-  </header>
+    <div class="cart" id="cart-btn">
 
-  <!-- PAGE PRODUIT -->
+      <i class="fa-solid fa-bag-shopping"></i>
 
-  <section class="product-page">
-
-    <div class="product-container">
-
-      <!-- IMAGE -->
-
-      <div class="product-image-box">
-
-        <img
-          id="main-image"
-          src=""
-          alt="Produit"
-        >
-
-      </div>
-
-      <!-- INFOS -->
-
-      <div class="product-details">
-
-        <p id="product-category"></p>
-
-        <h1 id="product-name"></h1>
-
-        <h2 id="product-price"></h2>
-
-        <p id="product-desc"></p>
-
-        <button id="add-to-cart-btn">
-          Ajouter au panier
-        </button>
-
-      </div>
+      <span id="cart-count">0</span>
 
     </div>
 
-  </section>
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
 
-  <script src="products.js"></script>
+  </div>
+
+</header>
+
+<!-- ======================================== -->
+<!-- 📦 PRODUCT PAGE -->
+<!-- ======================================== -->
+
+<section class="product-page">
+
+  <div class="product-container">
+
+    <!-- IMAGE -->
+
+    <div class="product-image-box">
+
+      <img
+        id="main-image"
+        src=""
+        alt="Produit"
+      >
+
+    </div>
+
+    <!-- INFOS -->
+
+    <div class="product-details">
+
+      <p id="product-category"></p>
+
+      <h1 id="product-name"></h1>
+
+      <h2 id="product-price"></h2>
+
+      <p id="product-desc"></p>
+
+      <button id="add-to-cart-btn">
+
+        Ajouter au panier 🛒
+
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================== -->
+<!-- 🛒 OVERLAY -->
+<!-- ======================================== -->
+
+<div id="overlay" class="overlay"></div>
+
+<!-- ======================================== -->
+<!-- 🛒 PANIER -->
+<!-- ======================================== -->
+
+<div id="cart-sidebar" class="cart-sidebar">
+
+  <div class="cart-header">
+
+    <h2>Mon Panier</h2>
+
+    <span id="close-cart">✖</span>
+
+  </div>
+
+  <div id="cart-items" class="cart-items"></div>
+
+  <div class="cart-footer">
+
+    <strong id="cart-total">
+
+      Total: 0 FCFA
+
+    </strong>
+
+    <button
+      id="checkout-btn"
+      class="btn-primary"
+    >
+
+      Commander
+
+    </button>
+
+  </div>
+
+</div>
+
+<!-- ======================================== -->
+<!-- 📱 BOTTOM NAV -->
+<!-- ======================================== -->
+
+<div class="bottom-nav">
+
+  <a href="index.html">🏠</a>
+
+  <a href="boutique.html">🛍️</a>
+
+  <a href="contact.html">📞</a>
+
+</div>
+
+<!-- ======================================== -->
+<!-- 🚀 SCRIPTS -->
+<!-- ======================================== -->
+
+<script src="products.js"></script>
+
+<script>
+
+  // 📱 MENU MOBILE
+
+  const toggle =
+    document.getElementById("menu-toggle");
+
+  const nav =
+    document.querySelector(".nav-links");
+
+  toggle.addEventListener("click", () => {
+
+    nav.classList.toggle("active");
+
+  });
+
+</script>
 
 </body>
 </html>
