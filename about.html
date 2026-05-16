@@ -16,20 +16,47 @@
 <body>
 
   <!-- HEADER -->
-  <!-- <header class="header">
+<header class="navbar">
 
-    <a href="index.html" class="logo">
-      Novaë
-    </a>
+  <div class="logo">
+    <h2>Novaë</h2>
+  </div>
 
-    <nav class="navbar">
-      <a href="index.html">Accueil</a>
-      <a href="boutique.html">Boutique</a>
-      <a href="about.html" class="active">À propos</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <nav class="nav-links">
 
-  </header> -->
+    <a href="index.html">Accueil</a>
+
+    <a href="boutique.html">Boutique</a>
+
+    <a href="about.html">À propos</a>
+
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+  <div class="nav-actions">
+
+    <div class="cart" id="cart-btn">
+
+      <i class="fa-solid fa-bag-shopping"></i>
+
+      <span id="cart-count">0</span>
+
+    </div>
+
+    <div id="theme-toggle" class="theme-toggle">
+  🌙
+</div>
+
+    <!-- 📱 MENU MOBILE -->
+
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
+
+  </div>
+
+</header>
 
   <!-- HERO -->
   <section class="about-hero">
@@ -157,6 +184,7 @@
   <a href="contact.html">📞</a>
 
 </div>
-
+<script src="cart.js"></script>
+<script src="theme.js"></script>
 </body>
 </html>

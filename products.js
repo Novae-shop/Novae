@@ -218,5 +218,6 @@ if (mainImage && product.image) {
 
   updateCartCount();
 
+  
 
 });

@@ -7,17 +7,24 @@ document.addEventListener("DOMContentLoaded", () => {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
   function saveCart() {
-    localStorage.setItem("cart", JSON.stringify(cart));
+
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(cart)
+    );
   }
 
   function updateCartCount() {
 
-    const count = document.getElementById("cart-count");
+    const count =
+    document.getElementById("cart-count");
 
     if (!count) return;
 
     const totalQty = cart.reduce((sum, item) => {
+
       return sum + (Number(item.quantity) || 1);
+
     }, 0);
 
     count.textContent = totalQty;
@@ -28,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return cart.reduce((total, item) => {
 
       const price = Number(item.price) || 0;
+
       const qty = Number(item.quantity) || 1;
 
       return total + (price * qty);
@@ -46,7 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function addToCart(product) {
 
-    const existing = cart.find(p => p.id === product.id);
+    const existing =
+    cart.find(p => p.id === product.id);
 
     if (existing) {
 
@@ -55,14 +64,19 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
 
       cart.push({
+
         ...product,
+
         quantity: 1
       });
     }
 
     refreshCartUI();
 
-    console.log("✅ Produit ajouté :", product.name);
+    console.log(
+      "✅ Produit ajouté :",
+      product.name
+    );
   }
 
   function increaseQty(index) {
@@ -97,7 +111,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* 📦 PRODUITS */
   /* ===================================================== */
 
-  // 📦 PRODUITS
   const products = [
     // {
     //   id: 1,
@@ -635,13 +648,16 @@ document.addEventListener("DOMContentLoaded", () => {
   category: "phones",
   image: "images/phones/moto3.jpg"
 },
+
+
   ];
 
   /* ===================================================== */
   /* 🔍 ELEMENTS */
   /* ===================================================== */
 
-  const productList = document.getElementById("product-list");
+  const productList =
+  document.getElementById("product-list");
 
   const searchInput =
   document.getElementById("searchInput");
@@ -672,7 +688,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     list.forEach(product => {
 
-      const card = document.createElement("div");
+      const card =
+      document.createElement("div");
 
       card.classList.add("product-card");
 
@@ -712,11 +729,12 @@ document.addEventListener("DOMContentLoaded", () => {
           JSON.stringify(product)
         );
 
-        window.location.href = "product.html";
+        window.location.href =
+        "product.html";
       });
 
       /* ========================================= */
-      /* 🛒 BOUTON AJOUT */
+      /* 🛒 AJOUT PANIER */
       /* ========================================= */
 
       const addBtn =
@@ -765,8 +783,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       result = result.filter(product => {
 
-        return product.category ===
-        categoryFilter.value;
+        return (
+          product.category ===
+          categoryFilter.value
+        );
       });
     }
 
@@ -774,14 +794,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (sortFilter) {
 
-      if (sortFilter.value === "price-asc") {
+      if (
+        sortFilter.value ===
+        "price-asc"
+      ) {
 
-        result.sort((a, b) => a.price - b.price);
+        result.sort(
+          (a, b) => a.price - b.price
+        );
       }
 
-      if (sortFilter.value === "price-desc") {
+      if (
+        sortFilter.value ===
+        "price-desc"
+      ) {
 
-        result.sort((a, b) => b.price - a.price);
+        result.sort(
+          (a, b) => b.price - a.price
+        );
       }
     }
 
@@ -859,7 +889,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function renderCart() {
 
-    if (!cartItemsContainer || !cartTotal) return;
+    if (
+      !cartItemsContainer ||
+      !cartTotal
+    ) return;
 
     cartItemsContainer.innerHTML = "";
 
@@ -925,14 +958,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     cartTotal.textContent =
-    "Total : " +
-    getTotal().toLocaleString() +
-    " FCFA";
+
+      "Total : " +
+
+      getTotal().toLocaleString() +
+
+      " FCFA";
   }
 
   /* ===================================================== */
-  /* 🔥 GLOBAL FUNCTIONS */
+  /* 🌍 GLOBAL FUNCTIONS */
   /* ===================================================== */
+
+  window.addToCart = addToCart;
 
   window.increaseQty = increaseQty;
 
